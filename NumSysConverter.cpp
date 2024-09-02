@@ -11,19 +11,49 @@ static int char_to_int(const char &c)
         return -1;
 }
 
-static int bits_converter(const std::string &bits, int set_of)
+ int bits_converter(std::string bits, const int &set_of)
 {
     int num = 0;
+    const int length = bits.length();
 
-    for (int i = set_of - 1; i >= 0; i--)
+    if (length > set_of)
+        return -1; // error
+
+    while ((bits.length() % set_of))
+        bits = '0' + bits;
+
+    for (int i = length - 1; i >= (length - set_of); i--)
     {
-        
+        if (bits.at(i) == '0')
+            continue;
+
+        num += std::pow(BIN, length - (i + 1));
     }
+
+    return num;
 }
 
 // bin
 std::string bin_to_oct(const std::string &bin)
 {
+    int oct = 0;
+    const int length = bin.length();
+
+    bin.substr(1);
+
+    // if (length % 3 != 0)
+    // {
+    //     for (int i = 0; i < (length % 3); i++)
+    //     {
+    //         bin = '0' + bin;
+    //     }
+    // }
+
+
+
+    std::cout << bin.length() << std::endl;
+    std::cout << bin << std::endl;
+
     return "";
 }
 
