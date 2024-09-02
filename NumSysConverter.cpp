@@ -11,16 +11,19 @@ static int char_to_int(const char &c)
         return -1;
 }
 
- int bits_converter(std::string bits, const int &set_of)
+static int bits_converter(std::string bits, const int &set_of)
 {
     int num = 0;
-    const int length = bits.length();
+    int length = bits.length();
 
     if (length > set_of)
         return -1; // error
 
     while ((bits.length() % set_of))
+    {
         bits = '0' + bits;
+        length++;
+    }
 
     for (int i = length - 1; i >= (length - set_of); i--)
     {
@@ -36,25 +39,21 @@ static int char_to_int(const char &c)
 // bin
 std::string bin_to_oct(const std::string &bin)
 {
-    int oct = 0;
+    int i;
+    std::string oct;
     const int length = bin.length();
 
-    bin.substr(1);
+    for (i = 3; i <= length; i += 3)
+        oct = std::to_string(bits_converter(bin.substr(length - i, 3), 3)) + oct;
 
-    // if (length % 3 != 0)
-    // {
-    //     for (int i = 0; i < (length % 3); i++)
-    //     {
-    //         bin = '0' + bin;
-    //     }
-    // }
+    if (3 - (i - length))
+    {
+        int num = bits_converter(bin.substr(0, 3 - (i - length)), 3);
+        if (num != 0)
+            oct = std::to_string(num) + oct;
+    }
 
-
-
-    std::cout << bin.length() << std::endl;
-    std::cout << bin << std::endl;
-
-    return "";
+    return oct;
 }
 
 std::string bin_to_dec(const std::string &bin)
@@ -73,10 +72,24 @@ std::string bin_to_dec(const std::string &bin)
     return std::to_string(dec);
 }
 
-// std::string bin_to_hex(const std::string &bin)
-// {
-//     return "";
-// }
+std::string bin_to_hex(const std::string &bin)
+{
+    int i;
+    std::string hex;
+    const int length = bin.length();
+
+    for (i = 4; i <= length; i += 4)
+        hex = std::to_string(bits_converter(bin.substr(length - i, 4), 4)) + hex;
+
+    if (4 - (i - length))
+    {
+        int num = bits_converter(bin.substr(0, 4 - (i - length)), 4);
+        if (num != 0)
+            hex = std::to_string(num) + hex;
+    }
+
+    return hex;
+}
 
 // oct
 std::string oct_to_bin(const std::string &oct)
