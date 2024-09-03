@@ -1,3 +1,6 @@
+You're right; formatting in markdown is essential for readability. Here's a properly formatted `README.md` file with correct indentation:
+
+```markdown
 # Number System Converter
 
 ## Overview
@@ -50,3 +53,43 @@ int main() {
 
     return 0;
 }
+```
+
+### Output:
+```
+Binary: 101010
+Octal: 52
+Decimal: 42
+Hexadecimal: 2A
+```
+
+## Installation
+To use the Number System Converter, simply clone the repository and include `NumSysConverter.h` and `NumSysConverter.cpp` in your project.
+
+```bash
+git clone https://github.com/yourusername/NumSysConverter.git
+```
+
+Include the header file in your C++ source files:
+
+```cpp
+#include "NumSysConverter.h"
+```
+
+## Contributing
+Feel free to contribute by submitting issues, suggesting features, or creating pull requests.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Author
+- **Your Name** - [yourusername](https://github.com/yourusername)
+
+## Acknowledgments
+- This library was inspired by the need to quickly convert between different number systems in various programming projects.
+```
+
+### Notes:
+1. Markdown uses 4 spaces or a tab for indenting code blocks.
+2. Replace the placeholders like `yourusername` with your actual GitHub username and relevant links.
+3. Ensure the structure is clear and consistent for better readability.
