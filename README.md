@@ -1,6 +1,3 @@
-You're right; formatting in markdown is essential for readability. Here's a properly formatted `README.md` file with correct indentation:
-
-```markdown
 # Number System Converter
 
 ## Overview
