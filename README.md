@@ -77,7 +77,7 @@ Include the header file in your C++ source files:
 Feel free to contribute by submitting issues, suggesting features, or creating pull requests.
 
 ## Author
-- **Your Name** - [yourusername](https://github.com/VaibhavGaikwad03)
+- **Name** - [Vaibhav Gaikwad](https://github.com/VaibhavGaikwad03)
 
 ## Acknowledgments
 - This library was inspired by the need to quickly convert between different number systems in various programming projects.
