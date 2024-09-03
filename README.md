@@ -82,8 +82,3 @@ Feel free to contribute by submitting issues, suggesting features, or creating p
 ## Acknowledgments
 - This library was inspired by the need to quickly convert between different number systems in various programming projects.
 ```
-
-### Notes:
-1. Markdown uses 4 spaces or a tab for indenting code blocks.
-2. Replace the placeholders like `yourusername` with your actual GitHub username and relevant links.
-3. Ensure the structure is clear and consistent for better readability.
