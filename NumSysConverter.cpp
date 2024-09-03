@@ -36,6 +36,16 @@ static int bits_converter(std::string bits, const int &set_of)
     return num;
 }
 
+static char hex_table(const int &num)
+{
+    if (num >= 0 && num <= 9)
+        return num + '0';
+    else if (num >= 10 && num <= 15)
+        return num + '7';
+    else
+        return '\0';
+}
+
 // bin
 std::string bin_to_oct(const std::string &bin)
 {
@@ -74,18 +84,18 @@ std::string bin_to_dec(const std::string &bin)
 
 std::string bin_to_hex(const std::string &bin)
 {
-    int i;
+    int i, num;
     std::string hex;
     const int length = bin.length();
 
     for (i = 4; i <= length; i += 4)
-        hex = std::to_string(bits_converter(bin.substr(length - i, 4), 4)) + hex;
+        hex = hex_table(bits_converter(bin.substr(length - i, 4), 4)) + hex;
 
     if (4 - (i - length))
     {
-        int num = bits_converter(bin.substr(0, 4 - (i - length)), 4);
+        num = bits_converter(bin.substr(0, 4 - (i - length)), 4);
         if (num != 0)
-            hex = std::to_string(num) + hex;
+            hex = hex_table(num) + hex;
     }
 
     return hex;
@@ -161,3 +171,13 @@ std::string dec_to_hex(const std::string &num)
 }
 
 // hex
+
+// int main()
+// {
+//     std::cout << hex_table(13) << std::endl;
+//     std::cout << hex_table(1) << std::endl;
+//     std::cout << hex_table(3) << std::endl;
+//     std::cout << hex_table(17) << std::endl;
+
+//     return 0;
+// }

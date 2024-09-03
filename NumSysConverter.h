@@ -8,7 +8,7 @@
 #define HEX 16
 
 static int char_to_int(const char &c);
-static std::string hex_table(const int &num);
+static char hex_table(const int &num);
 static int bits_converter( std::string bits, const int &set_of);
 
 std::string bin_to_oct(const std::string &bin);
