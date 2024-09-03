@@ -76,11 +76,8 @@ Include the header file in your C++ source files:
 ## Contributing
 Feel free to contribute by submitting issues, suggesting features, or creating pull requests.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Author
-- **Your Name** - [yourusername](https://github.com/yourusername)
+- **Your Name** - [yourusername](https://github.com/VaibhavGaikwad03)
 
 ## Acknowledgments
 - This library was inspired by the need to quickly convert between different number systems in various programming projects.
