@@ -37,7 +37,8 @@ The Number System Converter is a C++ library that allows you to convert numbers 
 #include <iostream>
 #include "NumSysConverter.h"
 
-int main() {
+int main()
+{
     std::string binary = "101010";
     std::string octal = bin_to_oct(binary);
     std::string decimal = bin_to_dec(binary);
