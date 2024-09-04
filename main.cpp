@@ -1,6 +1,6 @@
 #include <iostream>
 #include "NumSysConverter.h"
-
+ 
 int main()
 {
     std::string s = "111000111";
